@@ -1,11 +1,12 @@
+from pathlib import Path
+
 from setuptools import setup, find_packages
 
-with open('README.rst', 'r') as f:
-    long_description = f.read()
-
+this_directory = Path(__file__).parent
+long_description = (this_directory / "README.md").read_text()
 setup(
-    name='django-breadcrumbs-utils',
-    version='0.1.0',
+    name='django-breadcrumbs-util',
+    version='1.2',
     description='A package that provides a simple way to add breadcrumbs to your Django views',
     author='Hussein Thamer',
     author_email='hussinthamer211@gmail.com',
@@ -22,5 +23,5 @@ setup(
         'Programming Language :: Python :: 3.9',
     ],
     long_description=long_description,
-    long_description_content_type='text/x-rst'
+    long_description_content_type='text/markdown'
 )
