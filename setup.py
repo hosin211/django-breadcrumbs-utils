@@ -1,5 +1,8 @@
 from setuptools import setup, find_packages
 
+with open('README.rst', 'r') as f:
+    long_description = f.read()
+
 setup(
     name='django-breadcrumbs-utils',
     version='0.1.0',
@@ -18,4 +21,6 @@ setup(
         'Programming Language :: Python :: 3.8',
         'Programming Language :: Python :: 3.9',
     ],
+    long_description=long_description,
+    long_description_content_type='text/x-rst'
 )
